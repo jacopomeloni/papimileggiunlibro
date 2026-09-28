@@ -1,11 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <title>Papi, mi leggi un libro?</title>
+  <meta name="description" content="Storie inventate insieme ai miei due bambini, in montagna, a tavola o prima di dormire, che diventano libri. Il progetto di un ingegnere programmatore e papà.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello World</h1>
+  <header class="nav">
+    <a class="brand" href="#top">papimileggiunlibro<span class="dot">.</span></a>
+    <nav>
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#come-nasce">Come nasce una storia</a>
+      <a href="#libri">I libri</a>
+      <a href="#contatti" class="nav-cta">Contatti</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Storie per bambini, scritte a sei mani</p>
+        <h1>“Papi, mi leggi <em>un libro</em>?”</h1>
+        <p class="lead">
+          Ogni volta, a questa domanda, rispondevo inventando. Viaggi in giro per il mondo, animali incredibili,
+          avventure piene di colpi di scena e mistero. Ora quelle storie, nate con i miei due bambini,
+          stanno diventando libri veri.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#libri">Scopri i libri</a>
+          <a class="btn btn-ghost" href="#chi-sono">Chi c’è dietro</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 360" role="img">
+          <circle cx="300" cy="78" r="34" class="sun" />
+          <path d="M0 250 L70 170 L120 215 L190 120 L260 205 L310 160 L400 245 L400 360 L0 360 Z" class="mountains" />
+          <g class="stars">
+            <path d="M80 50 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5z" />
+            <path d="M200 30 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" />
+            <path d="M360 160 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" />
+            <path d="M40 170 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" />
+          </g>
+          <!-- libro aperto -->
+          <g class="book">
+            <path d="M200 150 C160 130 100 128 60 140 L60 300 C100 288 160 290 200 310 Z" class="page-l" />
+            <path d="M200 150 C240 130 300 128 340 140 L340 300 C300 288 240 290 200 310 Z" class="page-r" />
+            <path d="M200 150 L200 310" class="spine" />
+            <g class="lines">
+              <path d="M85 175 C120 168 160 170 185 180" />
+              <path d="M85 200 C120 193 160 195 185 205" />
+              <path d="M85 225 C120 218 150 220 170 228" />
+              <path d="M215 180 C240 170 280 168 315 175" />
+              <path d="M215 205 C240 195 280 193 315 200" />
+              <path d="M230 228 C250 220 280 218 315 225" />
+            </g>
+          </g>
+          <!-- codice che diventa stelle -->
+          <text x="210" y="112" class="code-float">&lt;/&gt;</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="section about">
+      <div class="section-head">
+        <p class="eyebrow">Chi sono</p>
+        <h2>Per lavoro scrivo codice.<br>Per passione, storie.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Sono un <strong>ingegnere e programmatore</strong>: passo le giornate a trasformare idee in
+            software, a scomporre problemi grandi in pezzi piccoli e a cercare la soluzione più elegante.
+          </p>
+          <p>
+            Ma soprattutto sono il <strong>papà di due bambini</strong> che non si accontentano mai
+            della solita favola. Durante una gita in montagna, a tavola, aspettando la cena o prima di dormire:
+            vogliono sempre una storia <em>nuova</em>. Con dentro
+            i loro personaggi, le loro idee e i loro colpi di scena.
+          </p>
+          <p>
+            Così abbiamo iniziato a inventarle insieme. E un giorno ho capito che era un peccato lasciarle
+            svanire così: meritavano di essere scritte, illustrate e condivise.
+          </p>
+        </div>
+
+        <div class="code-card" aria-label="Come nascono le nostre storie, scritto in codice">
+          <div class="code-bar"><span></span><span></span><span></span><em>storie.js</em></div>
+<pre><code><span class="k">const</span> momenti = [<span class="s">"in montagna"</span>, <span class="s">"a tavola"</span>,
+  <span class="s">"prima di cena"</span>, <span class="s">"prima di dormire"</span>];
+
+<span class="k">for</span> (<span class="k">const</span> momento <span class="k">of</span> momenti) {
+  <span class="k">const</span> idea = bambini.<span class="f">chiedi</span>(<span class="s">"e poi?"</span>);
+  storia.<span class="f">aggiungi</span>(idea);
+  papà.<span class="f">improvvisa</span>();
+}
+
+<span class="c">// e appena c’è un momento libero…</span>
+libro.<span class="f">scrivi</span>(storia);</code></pre>
+        </div>
+      </div>
+
+      <ul class="stats">
+        <li><strong>2</strong><span>co-autori under 10</span></li>
+        <li><strong>1</strong><span>papà con la tastiera</span></li>
+      </ul>
+    </section>
+
+    <!-- COME NASCE UNA STORIA -->
+    <section id="come-nasce" class="section process">
+      <div class="section-head">
+        <p class="eyebrow">Il metodo</p>
+        <h2>Come nasce una storia</h2>
+        <p class="section-sub">Un processo iterativo, proprio come nello sviluppo software. Solo con più merende.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="step-n">01</span>
+          <h3>La scintilla</h3>
+          <p>In cammino su un sentiero, a tavola o sotto le coperte. Uno dei bambini lancia un’idea: “E se il gatto sapesse volare?”</p>
+        </li>
+        <li>
+          <span class="step-n">02</span>
+          <h3>L’improvvisazione</h3>
+          <p>Si costruisce insieme, un pezzettino alla volta.</p>
+        </li>
+        <li>
+          <span class="step-n">03</span>
+          <h3>Gli appunti</h3>
+          <p>Prima che la magia svanisca, annoto tutto: nomi, battute, i dettagli che li hanno fatti ridere.</p>
+        </li>
+        <li>
+          <span class="step-n">04</span>
+          <h3>Il libro</h3>
+          <p>Riscrivo, rileggo con loro, correggo. Quando i piccoli editor approvano, la storia è pronta.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- LIBRI -->
+    <section id="libri" class="section books">
+      <div class="section-head">
+        <p class="eyebrow">I libri</p>
+        <h2>Sullo scaffale (e in arrivo)</h2>
+      </div>
+
+      <div class="book-grid">
+        <article class="book-card">
+          <div class="cover cover-1"><span>Tre amici e un oceano lontano</span></div>
+          <div class="book-meta">
+            <span class="tag">In scrittura</span>
+            <h3>Tre amici e un oceano lontano</h3>
+            <p>Una avventura in formato librogame per tre piccoli animaletti marini da un Oceano all'altro, viaggiando per l'America.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <!--section id="contatti" class="section cta">
+      <div class="cta-box">
+        <h2>Vuoi sapere quando esce il primo libro?</h2>
+        <p>Scrivimi: racconto volentieri il progetto, le storie e come le trasformiamo in libri.</p>
+        <a class="btn btn-primary" href="mailto:todo@todo">Scrivimi una mail</a>
+      </div>
+    </section -->
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> papimileggiunlibro — storie inventate insieme, ovunque ci troviamo.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
