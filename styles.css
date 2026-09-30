@@ -328,10 +328,7 @@ a { color: inherit; }
 .cover span { max-width: 12em; text-shadow: 0 2px 12px rgba(0, 0, 0, .15); }
 .cover-1 { background: linear-gradient(135deg, #2c2a6b, #6b4fbf 60%, #ff9a6b); }
 .cover-2 { background: linear-gradient(135deg, #ff9a6b, #ffc857); color: #3b2410; }
-.cover-img {
-  position: relative;
-  background: var(--bg-alt);
-}
+.cover-img { position: relative; }
 .cover-img img {
   position: absolute;
   inset: 16px;
