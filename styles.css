@@ -298,6 +298,34 @@ a { color: inherit; }
 @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
 
+/* ---------- BOOK STATES ---------- */
+.book-states { padding-top: 24px; }
+.states {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.states li {
+  position: relative;
+  padding: 24px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+.state-n {
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--mint);
+}
+.states h3 { font-size: 1.3rem; margin: 10px 0 8px; }
+.states p { margin: 0; color: var(--ink-soft); font-size: .97rem; }
+
+@media (max-width: 960px) { .states { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .states { grid-template-columns: 1fr; } }
+
 /* ---------- BOOKS ---------- */
 .book-grid {
   display: grid;
