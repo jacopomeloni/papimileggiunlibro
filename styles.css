@@ -266,6 +266,14 @@ a { color: inherit; }
   .about-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- AI ---------- */
+.ai-section { padding-top: 24px; }
+.ai-content {
+  max-width: 680px;
+}
+.ai-content p { margin: 0 0 1.1em; }
+.ai-content p:last-child { margin-bottom: 0; }
+
 /* ---------- PROCESS ---------- */
 .process { position: relative; }
 .steps {
