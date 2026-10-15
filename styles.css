@@ -83,7 +83,16 @@ a { color: inherit; }
 }
 
 @media (max-width: 760px) {
-  .nav { position: static; }
+  /* Telegram's in-app browser can keep sticky/backdrop-filter layers
+     composited above the page while scrolling. Keep the mobile header in
+     the normal document flow instead. */
+  .nav {
+    position: relative;
+    top: auto;
+    background: var(--bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
   .nav nav a:not(.nav-cta) { display: none; }
 }
 
