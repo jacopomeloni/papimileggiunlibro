@@ -83,6 +83,7 @@ a { color: inherit; }
 }
 
 @media (max-width: 760px) {
+  .nav { position: static; }
   .nav nav a:not(.nav-cta) { display: none; }
 }
 
