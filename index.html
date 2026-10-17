@@ -3,87 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Papi, mi leggi un libro?</title>
-  <meta name="description" content="Storie inventate insieme ai miei due bambini, in montagna, a tavola o prima di dormire, che diventano libri. Il progetto di un ingegnere programmatore e papà.">
+  <title>{{page.title}}</title>
+  <meta name="description" content="{{page.description}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
+  <script src="i18n.js" defer></script>
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top">papimileggiunlibro.com<span class="dot"></span></a>
+    <a class="brand" href="#top">{{brand.domain}}<span class="dot"></span></a>
     <nav>
-      <a href="#chi-sono">Chi sono</a>
-      <a href="#come-nasce">Come nasce una storia</a>
-      <a href="#intelligenza-artificiale">E l'IA?</a>
-      <a href="#stati-libro">Le fasi di un libro</a>
-      <a href="#libri">I libri</a>
+      <a href="#chi-sono">{{nav.link.1}}</a>
+      <a href="#come-nasce">{{nav.link.2}}</a>
+      <a href="#intelligenza-artificiale">{{nav.link.3}}</a>
+      <a href="#stati-libro">{{nav.link.4}}</a>
+      <a href="#libri">{{nav.link.5}}</a>
     </nav>
+    <div class="language-switcher" role="group" aria-label="{{language.label}}">
+      <button type="button" data-language="it" lang="it" aria-label="{{language.it.aria-label}}" title="{{language.it.title}}" aria-pressed="true">
+        <svg viewBox="0 0 30 20" aria-hidden="true"><path fill="#009246" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce2b37" d="M20 0h10v20H20z"/></svg>
+      </button>
+      <button type="button" data-language="en" lang="en" aria-label="{{language.en.aria-label}}" title="{{language.en.title}}" aria-pressed="false">
+        <svg viewBox="0 0 60 40" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/><path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60"/><path stroke="#c8102e" stroke-width="8" d="M30 0v40M0 20h60"/></svg>
+      </button>
+    </div>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
-        <p class="eyebrow">Storie per bambini, scritte con loro</p>
-        <h1>“Papi, mi leggi <em>un libro</em>?”</h1>
-        <p class="lead">
-          A questa domanda, rispondo inventando storie.
-          Viaggi in giro per il mondo, animali incredibili,
-          avventure piene di colpi di scena e mistero.
-          Ora quelle storie, nate con i miei due bambini, stanno diventando libri veri.
-        </p>
+        <p class="eyebrow">{{hero.eyebrow}}</p>
+        <h1>{{hero.title.1}}<em>{{hero.title.2}}</em>{{hero.title.3}}</h1>
+        <p class="lead">{{hero.description}}</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#libri">Scopri i libri</a>
-          <a class="btn btn-ghost" href="#chi-sono">Chi c’è dietro</a>
+          <a class="btn btn-primary" href="#libri">{{hero.action.1}}</a>
+          <a class="btn btn-ghost" href="#chi-sono">{{hero.action.2}}</a>
         </div>
       </div>
 
       <div class="hero-art">
-        <img src="assets/logo-papi-mi-leggi-un-libro.png" alt="Logo Papi, mi leggi un libro?" />
+        <img src="assets/logo-papi-mi-leggi-un-libro.png" alt="{{hero.imageAlt}}" />
       </div>
     </section>
 
     <!-- CHI SONO -->
     <section id="chi-sono" class="section about">
       <div class="section-head">
-        <p class="eyebrow">Chi sono</p>
-        <h2>Per lavoro scrivo codice.<br>Per passione, storie.</h2>
+        <p class="eyebrow">{{about.eyebrow}}</p>
+        <h2>{{about.title.1}}<br>{{about.title.2}}</h2>
       </div>
 
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            Sono un <strong>ingegnere e programmatore</strong>: passo le giornate a trasformare idee in
-            software, a scomporre problemi grandi in pezzi piccoli e a cercare la soluzione più elegante e funzionale.
-          </p>
-          <p>
-            Ma soprattutto sono il <strong>papà di due bambini</strong>.
-            Durante una gita in montagna, a tavola, aspettando la cena o prima di dormire:
-            vogliono sempre una storia <em>nuova</em>.
-            Con dentro i loro personaggi, le loro idee e i loro colpi di scena.
-          </p>
-          <p>
-            Così abbiamo iniziato a inventarle insieme.
-            Un giorno ho capito che era un peccato lasciarle
-            svanire: meritavano di essere scritte, illustrate e condivise.
-          </p>
+          <p>{{about.paragraph.1.1}}<strong>{{about.paragraph.1.2}}</strong>{{about.paragraph.1.3}}</p>
+          <p>{{about.paragraph.2.1}}<strong>{{about.paragraph.2.2}}</strong>{{about.paragraph.2.3}}<em>{{about.paragraph.2.4}}</em>{{about.paragraph.2.5}}</p>
+          <p>{{about.paragraph.3}}</p>
         </div>
 
-        <div class="code-card" aria-label="Come nascono le nostre storie, scritto in codice">
-          <div class="code-bar"><span></span><span></span><span></span><em>storie.js</em></div>
-<pre><code><span class="k">const</span> momenti = [<span class="s">"in montagna"</span>, <span class="s">"a tavola"</span>,
-  <span class="s">"prima di cena"</span>, <span class="s">"prima di dormire"</span>];
-
-<span class="k">for</span> (<span class="k">const</span> momento <span class="k">of</span> momenti) {
-  <span class="k">const</span> idea = bambini.<span class="f">chiedi</span>(<span class="s">"e poi?"</span>);
-  storia.<span class="f">aggiungi</span>(idea);
-  papà.<span class="f">improvvisa</span>();
-}
-
-<span class="c">// e appena c’è un momento libero…</span>
-libro.<span class="f">scrivi</span>(storia);</code></pre>
+        <div class="code-card" aria-label="{{code.label}}">
+          <div class="code-bar"><span></span><span></span><span></span><em>{{code.filename}}</em></div>
+<pre><code><span class="k">{{code.example.1}}</span>{{code.example.2}}<span class="s">{{code.example.3}}</span>{{code.example.4}}<span class="s">{{code.example.5}}</span>{{code.example.6}}<span class="s">{{code.example.7}}</span>{{code.example.8}}<span class="s">{{code.example.9}}</span>{{code.example.10}}<span class="k">{{code.example.11}}</span>{{code.example.12}}<span class="k">{{code.example.13}}</span>{{code.example.14}}<span class="k">{{code.example.15}}</span>{{code.example.16}}<span class="k">{{code.example.17}}</span>{{code.example.18}}<span class="f">{{code.example.19}}</span>{{code.example.20}}<span class="s">{{code.example.21}}</span>{{code.example.22}}<span class="f">{{code.example.23}}</span>{{code.example.24}}<span class="f">{{code.example.25}}</span>{{code.example.26}}<span class="c">{{code.example.27}}</span>{{code.example.28}}<span class="f">{{code.example.29}}</span>{{code.example.30}}</code></pre>
         </div>
       </div>
     </section>
@@ -91,32 +74,31 @@ libro.<span class="f">scrivi</span>(storia);</code></pre>
     <!-- COME NASCE UNA STORIA -->
     <section id="come-nasce" class="section process">
       <div class="section-head">
-        <p class="eyebrow">Il metodo</p>
-        <h2>Come nasce una storia</h2>
-        <p class="section-sub">Un processo iterativo, proprio come nello sviluppo software.
-          Solo più divertente e con più merende.</p>
+        <p class="eyebrow">{{process.eyebrow}}</p>
+        <h2>{{process.title}}</h2>
+        <p class="section-sub">{{process.description}}</p>
       </div>
 
       <ol class="steps">
         <li>
-          <span class="step-n">01</span>
-          <h3>La scintilla</h3>
-          <p>Un bambino lancia un’idea: “E se un gatto sapesse volare?”</p>
+          <span class="step-n">{{step.number.1}}</span>
+          <h3>{{process.step.title.1}}</h3>
+          <p>{{process.step.description.1}}</p>
         </li>
         <li>
-          <span class="step-n">02</span>
-          <h3>L’improvvisazione</h3>
-          <p>Si costruisce insieme, un pezzettino alla volta.</p>
+          <span class="step-n">{{step.number.2}}</span>
+          <h3>{{process.step.title.2}}</h3>
+          <p>{{process.step.description.2}}</p>
         </li>
         <li>
-          <span class="step-n">03</span>
-          <h3>Gli appunti</h3>
-          <p>Prima che la magia svanisca, annoto tutto (o quasi).</p>
+          <span class="step-n">{{step.number.3}}</span>
+          <h3>{{process.step.title.3}}</h3>
+          <p>{{process.step.description.3}}</p>
         </li>
         <li>
-          <span class="step-n">04</span>
-          <h3>Il libro</h3>
-          <p>Riscrivo, rileggo con loro, correggo. Quando i piccoli editor approvano, la storia è pronta.</p>
+          <span class="step-n">{{step.number.4}}</span>
+          <h3>{{process.step.title.4}}</h3>
+          <p>{{process.step.description.4}}</p>
         </li>
       </ol>
     </section>
@@ -124,50 +106,44 @@ libro.<span class="f">scrivi</span>(storia);</code></pre>
     <!-- INTELLIGENZA ARTIFICIALE -->
     <section id="intelligenza-artificiale" class="section ai-section">
       <div class="section-head">
-        <p class="eyebrow">E l'intelligenza artificiale?</p>
-        <h2>Fa parte della mia cassetta degli attrezzi.</h2>
+        <p class="eyebrow">{{ai.eyebrow}}</p>
+        <h2>{{ai.title}}</h2>
       </div>
 
       <div class="ai-content">
-        <p>Ma non scrive le storie al posto mio.</p>
-        <p>
-          La uso in modo consapevole come supporto: per cercare eventuali errori o incongruenze,
-          fare controlli aggiuntivi e aiutarmi nella realizzazione delle illustrazioni.
-        </p>
-        <p>
-          Le storie, invece, nascono dalle idee dei miei bambini e dalla mia fantasia.
-          Il testo viene scritto, riscritto e revisionato da me, fino all'ultima pagina.
-        </p>
+        <p>{{ai.paragraph.1}}</p>
+        <p>{{ai.paragraph.2}}</p>
+        <p>{{ai.paragraph.3}}</p>
       </div>
     </section>
 
     <!-- LE FASI DI UN LIBRO -->
     <section id="stati-libro" class="section book-states">
       <div class="section-head">
-        <h2>Le fasi di un libro</h2>
-        <p class="section-sub">Ogni storia attraversa qualche tappa prima di arrivare sugli scaffali.</p>
+        <h2>{{states.title}}</h2>
+        <p class="section-sub">{{states.description}}</p>
       </div>
 
       <ol class="states">
         <li>
-          <span class="state-n">01</span>
-          <h3>In scrittura</h3>
-          <p>La storia prende forma: personaggi, avventure e idee diventano pagine.</p>
+          <span class="state-n">{{step.number.1}}</span>
+          <h3>{{states.step.title.1}}</h3>
+          <p>{{states.step.description.1}}</p>
         </li>
         <li>
-          <span class="state-n">02</span>
-          <h3>In revisione</h3>
-          <p>Rileggo tutto, sistemo il ritmo e faccio crescere la storia un dettaglio alla volta.</p>
+          <span class="state-n">{{step.number.2}}</span>
+          <h3>{{states.step.title.2}}</h3>
+          <p>{{states.step.description.2}}</p>
         </li>
         <li>
-          <span class="state-n">03</span>
-          <h3>Controllo bozza</h3>
-          <p>Controllo l'impaginazione e ascolto il parere dei miei piccoli editor per le ultime modifiche.</p>
+          <span class="state-n">{{step.number.3}}</span>
+          <h3>{{states.step.title.3}}</h3>
+          <p>{{states.step.description.3}}</p>
         </li>
         <li>
-          <span class="state-n">04</span>
-          <h3>Pubblicato</h3>
-          <p>Il libro è pronto per essere letto.</p>
+          <span class="state-n">{{step.number.4}}</span>
+          <h3>{{states.step.title.4}}</h3>
+          <p>{{states.step.description.4}}</p>
         </li>
       </ol>
     </section>
@@ -175,26 +151,26 @@ libro.<span class="f">scrivi</span>(storia);</code></pre>
     <!-- LIBRI -->
     <section id="libri" class="section books">
       <div class="section-head">
-        <p class="eyebrow">I libri</p>
-        <h2>Sullo scaffale (e in arrivo)</h2>
+        <p class="eyebrow">{{books.eyebrow}}</p>
+        <h2>{{books.title}}</h2>
       </div>
 
       <div class="book-grid">
         <article class="book-card">
-          <div class="cover cover-1 cover-img"><img src="assets/copertina_tre_amici_e_un_oceano_lontano-no-logo.webp" alt="Copertina di Tre amici e un oceano lontano" width="800" height="1131" loading="lazy"></div>
+          <div class="cover cover-1 cover-img"><img src="assets/copertina_tre_amici_e_un_oceano_lontano-no-logo.webp" alt="{{books.imageAlt}}" width="800" height="1131" loading="lazy"></div>
           <div class="book-meta">
-            <span class="tag">Controllo bozza</span>
-            <h3>Tre amici e un oceano lontano</h3>
-            <p>Un'avventura in formato libro-game per tre piccoli amici animaletti da un Oceano all'altro, attraversando l'America.</p>
+            <span class="tag">{{books.status.1}}</span>
+            <h3>{{books.name.1}}</h3>
+            <p>{{books.description.1}}</p>
           </div>
         </article>
 
         <article class="book-card">
-          <div class="cover cover-2">Tre amici in giro per lo stivale</div>
+          <div class="cover cover-2">{{books.placeholder}}</div>
           <div class="book-meta">
-            <span class="tag">in scrittura</span>
-            <h3>Tre amici in giro per lo stivale</h3>
-            <p>I nostri piccoli amici animaletti in viaggio alla scoperta delle regioni d'Italia</p>
+            <span class="tag">{{books.status.2}}</span>
+            <h3>{{books.name.2}}</h3>
+            <p>{{books.description.2}}</p>
           </div>
         </article>
       </div>
@@ -205,11 +181,8 @@ libro.<span class="f">scrivi</span>(storia);</code></pre>
 <script src="https://www.jotform.com/website-widgets/embed/01a0f6a20f387000814263e316356a1841b4" defer></script>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> papimileggiunlibro — storie inventate insieme, ovunque ci troviamo.</p>
+    <p>{{footer.copyright}}<span id="year"></span>{{footer.brand}}<span class="footer-description">{{footer.description}}</span></p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

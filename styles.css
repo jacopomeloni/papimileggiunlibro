@@ -67,6 +67,28 @@ a { color: inherit; }
 }
 .brand .dot { color: var(--accent); }
 
+.language-switcher { display: flex; gap: 6px; margin-left: auto; flex-shrink: 0; }
+.language-switcher button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 7px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+.language-switcher svg { display: block; width: 26px; height: 18px; border-radius: 2px; }
+.language-switcher button:hover { background: var(--surface); }
+.language-switcher button[aria-pressed="true"] { border-color: var(--accent); background: var(--surface); }
+.language-switcher button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+@media (min-width: 761px) and (max-width: 1250px) {
+  .nav { flex-wrap: wrap; }
+  .nav nav { order: 1; width: 100%; justify-content: center; flex-wrap: wrap; }
+}
+
 .nav nav { display: flex; align-items: center; gap: 1.5rem; }
 .nav nav a {
   text-decoration: none;
@@ -93,7 +115,9 @@ a { color: inherit; }
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-  .nav nav a:not(.nav-cta) { display: none; }
+  .nav nav { display: none; }
+  .nav { gap: 8px; }
+  .brand { font-size: clamp(.8rem, 3.4vw, 1.2rem); }
 }
 
 /* ---------- COMMON ---------- */
