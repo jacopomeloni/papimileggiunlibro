@@ -384,6 +384,7 @@ a { color: inherit; }
 .book-card:hover { transform: translateY(-4px); }
 
 .cover {
+  background: linear-gradient(135deg, #2c2a6b, #6b4fbf 60%, #ff9a6b);
   aspect-ratio: 4 / 3;
   display: grid;
   place-items: center;
@@ -396,8 +397,6 @@ a { color: inherit; }
   color: #fff;
 }
 .cover span { max-width: 12em; text-shadow: 0 2px 12px rgba(0, 0, 0, .15); }
-.cover-1 { background: linear-gradient(135deg, #2c2a6b, #6b4fbf 60%, #ff9a6b); }
-.cover-2 { background: linear-gradient(135deg, #ff9a6b, #ffc857); color: #3b2410; }
 .cover-img { position: relative; }
 .cover-img img {
   position: absolute;
@@ -407,7 +406,6 @@ a { color: inherit; }
   object-fit: contain;
 }
 .cover-3 {
-  background: repeating-linear-gradient(45deg, var(--bg-alt), var(--bg-alt) 12px, var(--bg) 12px, var(--bg) 24px);
   color: var(--ink-soft);
   font-size: 3.5rem;
 }
