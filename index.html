@@ -26,9 +26,6 @@
       <button type="button" data-language="it" lang="it" aria-label="{{language.it.aria-label}}" title="{{language.it.title}}" aria-pressed="true">
         <svg viewBox="0 0 30 20" aria-hidden="true"><path fill="#009246" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce2b37" d="M20 0h10v20H20z"/></svg>
       </button>
-      <button type="button" data-language="en" lang="en" aria-label="{{language.en.aria-label}}" title="{{language.en.title}}" aria-pressed="false">
-        <svg viewBox="0 0 60 40" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/><path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60"/><path stroke="#c8102e" stroke-width="8" d="M30 0v40M0 20h60"/></svg>
-      </button>
     </div>
   </header>
 
@@ -159,7 +156,10 @@
         <article class="book-card">
           <div class="cover cover-1 cover-img"><img src="assets/copertina_tre_amici_e_un_oceano_lontano-no-logo.webp" alt="{{books.imageAlt}}" width="800" height="1131" loading="lazy"></div>
           <div class="book-meta">
-            <span class="tag">{{books.status.1}}</span>
+            <div class="book-actions">
+              <span class="tag tag-published">{{books.status.1}}</span>
+              <a class="tag tag-action" href="https://amzn.eu/d/0byqtc2c" target="_blank" rel="noopener noreferrer">{{books.buyAmazon}}</a>
+            </div>
             <h3>{{books.name.1}}</h3>
             <p>{{books.description.1}}</p>
           </div>

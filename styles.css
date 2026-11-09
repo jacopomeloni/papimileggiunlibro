@@ -413,6 +413,7 @@ a { color: inherit; }
 .book-meta { padding: 22px 24px 26px; }
 .book-meta h3 { font-size: 1.3rem; margin: 10px 0 6px; }
 .book-meta p { margin: 0; color: var(--ink-soft); font-size: .97rem; }
+.book-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 
 .tag {
   display: inline-block;
@@ -425,6 +426,10 @@ a { color: inherit; }
   background: color-mix(in srgb, var(--accent) 14%, transparent);
   color: var(--accent);
 }
+.tag-published { background: #dcfce7; color: #166534; }
+.tag-action { background: var(--accent); color: var(--accent-ink); text-decoration: none; }
+.tag-action:hover { text-decoration: underline; }
+.tag-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .tag-soft {
   background: color-mix(in srgb, var(--ink-soft) 14%, transparent);
   color: var(--ink-soft);

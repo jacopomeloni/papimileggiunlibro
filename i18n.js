@@ -1,11 +1,10 @@
 (() => {
   const placeholder = /\{\{([\w.-]+)\}\}/g;
-  const storageKey = 'papimileggiunlibro-language';
   const textTemplates = [];
   const attributeTemplates = [];
   const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
 
-  // Keep the templates so switching languages never depends on rendered text.
+  // Collect text and attribute templates before rendering the Italian content.
   while (walker.nextNode()) {
     const node = walker.currentNode;
     if (node.textContent.includes('{{')) {
@@ -22,8 +21,8 @@
 
   const buttons = document.querySelectorAll('[data-language]');
 
-  function setLanguage(language) {
-    const selected = language === 'en' ? 'en' : 'it';
+  function setLanguage() {
+    const selected = 'it';
     const strings = languageTranslations[selected];
     const translate = template => template.replace(placeholder, (token, key) =>
       strings[key] ?? languageTranslations.it[key] ?? token
@@ -41,12 +40,6 @@
     });
   }
 
-  buttons.forEach(button => button.addEventListener('click', () => {
-    const language = button.dataset.language;
-    setLanguage(language);
-    try { localStorage.setItem(storageKey, language); } catch { /* Storage may be disabled. */ }
-  }));
-
   document.getElementById('year').textContent = new Date().getFullYear();
-  try { setLanguage(localStorage.getItem(storageKey)); } catch { setLanguage('it'); }
+  setLanguage();
 })();
